@@ -67,7 +67,7 @@ int main() {
 	FastIO;
 	int testcase = 1;
 	//cin >> testcase;
-	while (testcase--) {
+	for (int tc = 1;tc <= testcase;tc++) {
 		solve();
 	}
 }
