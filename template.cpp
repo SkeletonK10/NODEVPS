@@ -32,27 +32,27 @@ const double PI = acos(-1);
 
 //////Union-Find///////////////////////////////////////////
 
-// struct Union_Find {
-// 	std::vector<int> arr;
+// struct union_find {
+//   std::vector<int> arr;
 
-// 	Union_Find(int sz) {
-// 		arr.resize(sz + 1);
-// 		for (int i = 1; i <= sz; i++)
-// 			arr[i] = i;
-// 	}
+//   union_find(int sz) {
+//     arr.resize(sz + 1);
+//     for (int i = 1; i <= sz; i++)
+//       arr[i] = i;
+//   }
 
-// 	int Find(int x) {
-// 		if (arr[x] == x) return x;
-// 		else return arr[x] = Find(arr[x]);
-// 	}
+//   int find(int x) {
+//     if (arr[x] == x) return x;
+//     else return arr[x] = find(arr[x]);
+//   }
 
-// 	void Union(int x, int y) {
-// 		x = Find(x);
-// 		y = Find(y);
-// 		if (x != y) {
-// 			arr[y] = x;
-// 		}
-// 	}
+//   void merge(int x, int y) {
+//     x = find(x);
+//     y = find(y);
+//     if (x != y) {
+//       arr[y] = x;
+//     }
+//   }
 // };
 
 ///////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ const double PI = acos(-1);
 using namespace std;
 
 void solve() {
-	// DO what you can DO!
+  // DO what you can DO!
 }
 
 int main() {
-	FastIO;
-	int testcase = 1;
-	//cin >> testcase;
-	for (int tc = 1;tc <= testcase;tc++) {
-		solve();
-	}
+  FastIO;
+  int testcase = 1;
+  //cin >> testcase;
+  for (int tc = 1;tc <= testcase;tc++) {
+    solve();
+  }
 }
