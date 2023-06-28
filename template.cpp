@@ -27,8 +27,9 @@ const double PI = acos(-1);
 // const int dx[] = { -1,1,0,0,1,1,-1,-1 };
 // const int dy[] = { 0,0,-1,1,1,-1,1,-1 };
 
-// bool inRange(int i, int j, int n, int m)
-// { return 0 <= i && i < n && 0 <= j && j < m; }
+// bool inRange(int i, int j, int n, int m) {
+//   return 0 <= i && i < n && 0 <= j && j < m;
+// }
 
 //////Union-Find///////////////////////////////////////////
 
