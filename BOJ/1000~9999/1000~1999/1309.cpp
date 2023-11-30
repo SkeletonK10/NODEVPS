@@ -10,7 +10,7 @@ typedef std::complex<double> cpx;
 
 //////Constants////////////////////////////////////////////
 
-const int MOD = 9901;
+const int MOD = 9901;                      // 중요! MOD 체크
 const int INF = 987654321;
 const ll LINF = 987654321987654321LL;
 const int SZ = 262144;
@@ -19,6 +19,9 @@ const double PI = acos(-1);
 ///////////////////////////////////////////////////////////
 
 using namespace std;
+
+// 어떤 row에 사자가 들어갈 경우의 수는 총 3개 (없음, 왼쪽에 있음, 오른쪽에 있음)
+// n번째 row에 사자가 이렇게 들어가 있을 때 사자가 들어가는 경우의 수 = dp[n][k];
 
 int dp[100001][3];
 

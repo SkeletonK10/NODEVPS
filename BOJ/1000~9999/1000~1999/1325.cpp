@@ -3,6 +3,10 @@
 
 using namespace std;
 
+// 어떤 컴퓨터를 시작점으로 하여 그래프 탐색 (여기서는 BFS) 진행.
+// 모든 컴퓨터에 대해 반복하여 최댓값을 찾는다.
+// 최댓값이 갱신될 때 정답 컴퓨터 리스트도 같이 갱신해야함!
+
 void solve() {
   int n, m;
   cin >> n >> m;
@@ -36,6 +40,8 @@ void solve() {
       ansCnt = in;
       ans = { i };
     }
+    // 같을 때 정답 리스트에 추가
+    // 이미 오름차순으로 순회 중이기 때문에 따로 정렬할 필요는 없음.
     else if (ansCnt == in)
       ans.push_back(i);
   }
