@@ -38,6 +38,12 @@ struct union_find {
 
 using namespace std;
 
+// 2개의 마을로 분할하기, 이때 cost 최소로
+
+// MST로 해결
+// MST를 구성하는 edge 중 cost가 최대인 것을 골라내서 지우면 완성
+// Kruskal algorithm을 사용하되, 마지막으로 사용된 edge의 cost 저장
+
 void solve() {
   int n, m;
   vector<tiii> edge;
@@ -52,8 +58,8 @@ void solve() {
   int ans = 0, last = 0;
   for (auto& [c, s, e] : edge) {
     if (uf.find(s) != uf.find(e)) {
-      last = c;
-      ans += c;
+      last = c;  // 마지막 edge 저장
+      ans += c;  // 총 cost 저장
       uf.merge(s, e);
     }
   }
