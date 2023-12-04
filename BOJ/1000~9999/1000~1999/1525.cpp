@@ -5,6 +5,11 @@
 
 using namespace std;
 
+// 9-puzzle
+// 각 상태를 하나의 string으로 저장해서 BFS 진행
+// (상태, 거리)의 map으로 visit 여부 저장
+// 총 시간복잡도 O( nlogn ), 이때 n ~~ 9!
+
 map<string, int> bfs() {
   queue<string> q;
   map<string, int> mp;
