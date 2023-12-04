@@ -12,6 +12,9 @@ typedef std::complex<double> cpx;
 
 using namespace std;
 
+// 간단한 약수 판정
+// n >= 10 이므로 100만개 다 나눠봐도 된다.
+
 bool solve() {
   ll n;
   cin >> n;
@@ -26,6 +29,6 @@ int main() {
   int testcase = 1;
   cin >> testcase;
   for (int tc = 1;tc <= testcase;tc++) {
-    cout << (solve() ? "YES" : "NO") << endl;
+    cout << ( solve() ? "YES" : "NO" ) << endl;
   }
 }

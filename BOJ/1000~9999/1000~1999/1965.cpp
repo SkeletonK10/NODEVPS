@@ -4,6 +4,9 @@
 
 using namespace std;
 
+// 그냥 LIS 문제
+// O(n^2)도 상관 없다. 여기서는 upper_bound를 이용한 O(nlogn) 방법 사용
+
 void solve() {
   int n;
   cin >> n;
