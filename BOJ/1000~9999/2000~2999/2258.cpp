@@ -12,12 +12,20 @@ typedef std::pair<ll, ll> pll;
 typedef std::tuple<int, int, int> tiii;
 typedef std::complex<double> cpx;
 
+//////Constants////////////////////////////////////////////
+
+const int MOD = 1e9 + 7;
+const int INF = 987654321;
+const ll LINF = 987654321987654321LL;
+const int SZ = 262144;
+const double PI = acos(-1);
+
 ///////////////////////////////////////////////////////////
 
 using namespace std;
 
 bool comp(const pll& a, const pll& b) {
-  if (a.SS == b.SS) return a.FF < b.FF;
+  if (a.SS == b.SS) return a.FF > b.FF;
   else return a.SS < b.SS;
 }
 
@@ -25,40 +33,28 @@ void solve() {
   int n;
   ll m;
   cin >> n >> m;
-  vector<pll> v(n + 1);
-  for (int i = 1;i <= n;i++)
-    cin >> v[i].FF >> v[i].SS;
+  vector<pll> v(n);
+  for (pll& i : v)
+    cin >> i.FF >> i.SS;
   sort(all(v), comp);
 
-  map<ll, ll> prv, s;
-  prv[0] = -1;
-  for (int i = 1;i <= n;i++) {
-    if (v[i - 1].SS != v[i].SS) {
-      prv[v[i].SS] = v[i - 1].SS;
-      s[v[i].SS] += s[v[i - 1].SS];
+  ll cost = v[0].SS, sum = cost, val = v[0].FF;
+  ll ans = ( val >= m ) ? sum : LINF;
+  for (int i = 1;i < n;i++) {
+    val += v[i].FF;
+    if (cost == v[i].SS) {
+      sum += cost;
     }
-    s[v[i].SS] += v[i].FF;
+    else {
+      cost = v[i].SS;
+      sum = cost;
+    }
+
+    if (val >= m)
+      ans = min(ans, sum);
   }
 
-  if (m > s[prv[v[n].SS]] && m <= s[v[n].SS]) {
-    ll ls = 0, rem = m - s[prv[v[n].SS]];
-    for (int i = n;v[i].SS == v[n].SS;i--) {
-      ls += v[i].FF;
-      if (ls >= rem) {
-        cout << v[n].SS * ( n - i + 1 );
-        return;
-      }
-    }
-  }
-
-  for (int i = 1;i <= n;i++) {
-    if (m <= v[i].FF + s[prv[v[i].SS]]) {
-      cout << v[i].SS;
-      return;
-    }
-  }
-
-  cout << -1;
+  cout << ( ( ans == LINF ) ? -1 : ans );
 }
 
 int main() {
