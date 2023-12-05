@@ -3,11 +3,19 @@
 
 using namespace std;
 
+// 스택을 활용해 0101 string에서 트리를 재구성한다.
+// 2개의 사과가 썩었기 때문에 이들의 LCS를 자르면 됨.
+// 이후는 간단한 LCS 구하기. O(n) 으로 충분히 가능하다
+
 void solve() {
   int n, x, y;
   string s;
   cin >> n >> s >> x >> y;
-  vector<int> parent(n + 1), in(n + 1), out(n + 1), depth(n + 1);
+  vector<int>
+    parent(n + 1),  // i번째 정점의 부모 (재구성한 실제 트리)
+    in(n + 1),  // 정답 출력용 배열 (i번째 정점의 0 위치)
+    out(n + 1),  // 정답 출력용 배열 (i번째 정점의 1 위치)
+    depth(n + 1);  // i번째 정점의 깊이 (루트 기준)
   stack<int> st;
   st.push(0);
 

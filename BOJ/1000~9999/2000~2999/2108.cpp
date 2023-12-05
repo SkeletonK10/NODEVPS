@@ -3,6 +3,9 @@
 #define endl '\n'
 using namespace std;
 
+// counter 배열을 활용해 최빈값 구함
+// 2번째로 작은 값을 구하기 위해 isTwo를 토글로 켜 준 후 유지한다.
+
 int app[8001];
 
 int main()
