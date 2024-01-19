@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define FastIO ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define FastIO ios::sync_with_stdio(false); cin.tie(0);
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define compress(x) sort(all(x)); x.erase(unique(all(x)),(x).end())
