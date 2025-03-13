@@ -7,14 +7,31 @@
 #define FF first
 #define SS second
 
-//////New Type Definition//////////////////////////////////
+//////Debugging//////////////////////////////////////////////////////////////////////////
+
+template<class T>
+std::ostream& operator<<(std::ostream& stream, const std::vector<T>& v) {
+  copy(v.begin(), v.end(), std::ostream_iterator<T>(stream, " "));
+  return stream;
+}
+
+template<typename T>
+std::ostream &operator <<(std::ostream &os, const std::vector<std::vector<T>> &v) {
+  using namespace std;
+  //copy(v.begin(), v.end(), ostream_iterator<std::vector<T>>(os, "\n"));
+  for (size_t i = 0; i < v.size(); i++)
+    os << v[i] << "\n";
+  return os;
+}
+
+//////New Type Definition////////////////////////////////////////////////////////////////
 
 typedef long long ll;
 typedef std::pair<int, int> pii;
 typedef std::tuple<int, int, int> tiii;
 typedef std::complex<double> cpx;
 
-//////Constants////////////////////////////////////////////
+//////Constants//////////////////////////////////////////////////////////////////////////
 
 const int MOD = 1e9 + 7;
 const int INF = 987654321;
@@ -22,7 +39,7 @@ const ll LINF = 987654321987654321LL;
 const int SZ = 262144;
 const double PI = acos(-1);
 
-//////2D Graph Search//////////////////////////////////////
+//////2D Graph Search////////////////////////////////////////////////////////////////////
 
 // const int dx[] = { -1,1,0,0,1,1,-1,-1 };
 // const int dy[] = { 0,0,-1,1,1,-1,1,-1 };
@@ -31,7 +48,7 @@ const double PI = acos(-1);
 //   return 0 <= i && i < n && 0 <= j && j < m;
 // }
 
-//////Union-Find///////////////////////////////////////////
+//////Union-Find/////////////////////////////////////////////////////////////////////////
 
 // struct union_find {
 //   std::vector<int> arr;
@@ -56,7 +73,7 @@ const double PI = acos(-1);
 //   }
 // };
 
-///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 
 using namespace std;
 
