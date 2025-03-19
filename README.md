@@ -10,7 +10,7 @@ git update-index --assume-unchanged a.cpp input.txt output.txt
 
 ### Example Usage of `ex.sh`
 
-1. **Compile and execute the program:**
+1. **Compile and execute the program (using C++20 standard):**
 
    ```
    ./ex.sh
@@ -19,7 +19,7 @@ git update-index --assume-unchanged a.cpp input.txt output.txt
    Output:
 
    ```
-   (NO standard output but result has saved in output.txt)
+   (No standard output, but the result is saved in output.txt)
    ```
 
 2. **Error when `a.cpp` is missing:**
