@@ -1,16 +1,52 @@
 # NODEVPS
 
+A project to utilize my Problem Solving
+
 ### Initialization
 
 ```
 git update-index --assume-unchanged a.cpp input.txt output.txt
 ```
 
-### Execution
+### Example Usage of `ex.sh`
 
-```
-./ex.sh
-```
+1. **Compile and execute the program:**
+
+   ```
+   ./ex.sh
+   ```
+
+   Output:
+
+   ```
+   (NO standard output but result has saved in output.txt)
+   ```
+
+2. **Error when `a.cpp` is missing:**
+
+   ```
+   ./ex.sh
+   ```
+
+   Output:
+
+   ```
+   Error: Source file 'a.cpp' not found.
+   ```
+
+3. **Error when `input.txt` is missing:**
+
+   ```
+   ./ex.sh
+   ```
+
+   Output:
+
+   ```
+   Error: Input file 'input.txt' not found.
+   ```
+
+---
 
 ### Example Usage of `touch.sh`
 
