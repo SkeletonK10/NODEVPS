@@ -1,8 +1,5 @@
 #include <bits/stdc++.h>
-#define FastIO ios::sync_with_stdio(false); cin.tie(0);
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define compress(x) sort(all(x)); x.erase(unique(all(x)),(x).end())
+#define FastIO std::ios::sync_with_stdio(false); cin.tie(0);
 #define endl '\n'
 #define FF first
 #define SS second
@@ -17,9 +14,8 @@ std::ostream& operator<<(std::ostream& stream, const std::vector<T>& v) {
 
 template<typename T>
 std::ostream &operator <<(std::ostream &os, const std::vector<std::vector<T>> &v) {
-  using namespace std;
   //copy(v.begin(), v.end(), ostream_iterator<std::vector<T>>(os, "\n"));
-  for (size_t i = 0; i < v.size(); i++)
+  for (std::size_t i = 0; i < v.size(); i++)
     os << v[i] << "\n";
   return os;
 }
@@ -35,9 +31,9 @@ typedef std::complex<double> cpx;
 
 const int MOD = 1e9 + 7;
 const int INF = 987654321;
-const ll LINF = 987654321987654321LL;
+const long long LINF = 987654321987654321LL;
 const int SZ = 262144;
-const double PI = acos(-1);
+const double PI = std::numbers::pi;
 
 //////2D Graph Search////////////////////////////////////////////////////////////////////
 
