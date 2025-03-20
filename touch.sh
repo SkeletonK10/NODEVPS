@@ -47,9 +47,15 @@ if ! [[ $number =~ ^[0-9]{4,5}$ ]]; then
 fi
 
 # Calculate directory structure
-base=$((number / 10000 * 10000))
-sub=$((number / 1000 * 1000))
-dir="./${domain}/${base}~$((base + 9999))/${sub}~$((sub + 999))"
+if [ "$domain" = "BOJ" ] && [ "$number" -lt 10000 ]; then
+  base=1000
+  sub=$((number / 1000 * 1000))
+  dir="./${domain}/${base}~9999/${sub}~$((sub + 999))"
+else
+  base=$((number / 10000 * 10000))
+  sub=$((number / 1000 * 1000))
+  dir="./${domain}/${base}~$((base + 9999))/${sub}~$((sub + 999))"
+fi
 
 # Check if the file already exists
 file_path="$dir/$number.$extension"
@@ -69,4 +75,3 @@ mkdir -p "$dir"
 # Create the file with the specified extension
 touch "$file_path"
 echo "File created at: $file_path"
-
