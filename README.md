@@ -53,25 +53,31 @@ git update-index --assume-unchanged a.cpp input.txt output.txt
 1. **Create a new file with default extension (`cpp`):**
 
    ```
-   ./touch.sh -d BOJ -n 12345
+   ./touch.sh -d BOJ -i 12345
    ```
 
    Output:
 
    ```
-   File created at: ./BOJ/10000~19999/12000~12999/12345.cpp
+   Domain: BOJ
+   ID: 12345
+   Extension set to: cpp
+   File created at: ./BOJ/12345.cpp
    ```
 
 2. **Create a new file with a custom extension:**
 
    ```
-   ./touch.sh -d BOJ -n 12345 -e txt
+   ./touch.sh -d BOJ -i 12345 -e txt
    ```
 
    Output:
 
    ```
-   File created at: ./BOJ/10000~19999/12000~12999/12345.txt
+   Domain: BOJ
+   ID: 12345
+   Extension set to: txt
+   File created at: ./BOJ/12345.txt
    ```
 
 3. **Error when the file already exists:**
@@ -83,7 +89,7 @@ git update-index --assume-unchanged a.cpp input.txt output.txt
    Output:
 
    ```
-   Error: File './BOJ/10000~19999/12000~12999/12345.cpp' already exists.
+   Error: File './BOJ/12345.cpp' already exists.
    ```
 
 4. **Error when the domain folder does not exist:**
