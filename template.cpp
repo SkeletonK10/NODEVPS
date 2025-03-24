@@ -33,7 +33,7 @@ const int MOD = 1e9 + 7;
 const int INF = 987654321;
 const long long LINF = 987654321987654321LL;
 const int SZ = 262144;
-const double PI = std::numbers::pi;
+const double PI = acos(-1);
 
 //////2D Graph Search////////////////////////////////////////////////////////////////////
 
