@@ -20,6 +20,5 @@ cp "$SOURCE_FILE" "$DEST_FILE"
 # Add, commit, and push changes to git
 git add "$DEST_FILE"
 git commit -m "BOJ $PROBLEM_NUMBER"
-git push
 
-echo "Submitted BOJ problem $PROBLEM_NUMBER to $DEST_FILE"
+echo "Committed BOJ problem $PROBLEM_NUMBER to $DEST_FILE"
