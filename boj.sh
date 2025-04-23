@@ -6,10 +6,16 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+  echo "Error: Problem number must be a numeric value."
+  exit 1
+fi
+
 PROBLEM_NUMBER=$1
-SOURCE_FILE="a.cpp"
+LANGUAGE=${2:-cpp} # Default to cpp if no second argument is provided
+SOURCE_FILE="a.${LANGUAGE}"
 DEST_DIR="BOJ"
-DEST_FILE="$DEST_DIR/$PROBLEM_NUMBER.cpp"
+DEST_FILE="$DEST_DIR/$PROBLEM_NUMBER.${LANGUAGE}"
 
 # Create destination directory if it doesn't exist
 mkdir -p "$DEST_DIR"
