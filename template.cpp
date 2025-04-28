@@ -1,27 +1,17 @@
-#include <bits/stdc++.h>
-#define FastIO std::ios::sync_with_stdio(false); cin.tie(0);
-#define endl '\n'
-#define FF first
-#define SS second
-
 //////Debugging//////////////////////////////////////////////////////////////////////////
 
+#include <ostream>
+#include <iterator>
+#include <vector>
 template<class T>
 std::ostream& operator<<(std::ostream& stream, const std::vector<T>& v) {
   copy(v.begin(), v.end(), std::ostream_iterator<T>(stream, " "));
   return stream;
 }
 
-template<typename T>
-std::ostream &operator <<(std::ostream &os, const std::vector<std::vector<T>> &v) {
-  //copy(v.begin(), v.end(), ostream_iterator<std::vector<T>>(os, "\n"));
-  for (std::size_t i = 0; i < v.size(); i++)
-    os << v[i] << "\n";
-  return os;
-}
-
 //////New Type Definition////////////////////////////////////////////////////////////////
 
+#include <complex>
 typedef long long ll;
 typedef std::pair<int, int> pii;
 typedef std::tuple<int, int, int> tiii;
@@ -29,6 +19,7 @@ typedef std::complex<double> cpx;
 
 //////Constants//////////////////////////////////////////////////////////////////////////
 
+#include <cmath>
 const int MOD = 1e9 + 7;
 const int INF = 987654321;
 const long long LINF = 987654321987654321LL;
@@ -68,6 +59,13 @@ const double PI = acos(-1);
 //     }
 //   }
 // };
+
+//////Custom Preprocessor Directives/////////////////////////////////////////////////////
+
+#define endl '\n'
+#define FastIO std::ios::sync_with_stdio(false); cin.tie(0);
+#include <iostream>
+#include <algorithm>
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
