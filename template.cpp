@@ -63,6 +63,7 @@ const double PI = acos(-1);
 //////Custom Preprocessor Directives/////////////////////////////////////////////////////
 
 #include <iostream>
+#include <vector>
 #include <algorithm>
 #define endl '\n'
 #define FastIO std::ios::sync_with_stdio(false); cin.tie(0);
