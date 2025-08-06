@@ -1,0 +1,1 @@
+print("GOOD" if int(''.join(input().split('-')))<20230917 else "TOO LATE")
